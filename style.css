@@ -15,8 +15,10 @@
     color: white;
     padding: 10px 20px;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+  
   }
 
   /* Logo */
@@ -79,43 +81,51 @@
     }
   }
 
-  /* aside */
-  .aside-publicidad aside {
   
 
-   width: 100%;
-  max-width: 300px;
+
+.aside-publicidad aside {
+  width: 100%;
   height: auto;
-  aspect-ratio: 3 / 4;
+   aspect-ratio: 3 / 4;
   background-image: url('imagenes/publicidad/chocolate.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-  min-height: 450px; /* mantiene el tamaño aunque no haya contenido */
+
+   padding-left: 20px;
+    padding-right: 20px;
 }
 
+
+
+
 .aside-publicidad h3 {
+
+ display: block;
+    margin: 0;             /* elimina márgenes que rompen alineación */
+    padding: 10px;         /* mismo padding que el h2 de noticias si quieres */
+
+   text-align: center;
   
-  margin-bottom: 10px;
   font-size: 1.1rem;
   color: #111;
    background-color: #d6d5d5;  /* color oscuro */
    display: inline-block;  
-    padding: 5px 10px;            /* espacio alrededor del texto */
+    
   border-radius: 5px;           /* esquinas redondeadas */
    font-weight: bold;
 }
 
-.aside-publicidad{text-align: center;}
-
-
-/* main */
-
-main {
-  padding: 20px;
-  background-color: #f9f9f9;
-  
+.container .aside-publicidad {
+  flex: 1;      /* ocupa 1 parte del contenedor */
+  display: flex;
+  flex-direction: column; /* para que h3 y aside se apilen */
+  gap: 10px;
 }
+
+
+
 
 .news-highlights {
   display: grid;
@@ -167,27 +177,15 @@ main {
 }
 
 /* Main: ocupa más espacio */
-main {
-  flex: 3; /* 3 partes de ancho */
+.container main {
+  flex: 5; /* 4 partes de ancho */
   background-color: #f9f9f9;
-}
-
-/* Aside */
-aside {
-  flex: 1; /* 1 parte de ancho */
-  
-  background-image: url('imagenes/publicidad/chocolate.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-
-    width: 100%; /* ocupa todo el ancho disponible dentro del contenedor flex */
-  max-width: 300px; /* tamaño máximo */
-  height: auto;
-  aspect-ratio: 3 / 4; /* relación de aspecto vertical */
    
+   padding-left: 20px;
+    padding-right: 20px;
 }
+
+
 
 
 
@@ -236,17 +234,20 @@ aside {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Responsivo: para pantallas pequeñas, main y aside se apilan */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
   
-  aside {
+  .aside-publicidad {
     width: 100%;
-    height: 250px;
+  }
+  
+  .aside-publicidad aside {
+    height: 300px;
   }
 }
+
 
 /* titulo del main */
 .section-title {
@@ -256,7 +257,7 @@ aside {
   text-align: center;       /* centrado sobre las noticias */
   font-weight: bold;
   text-transform: uppercase; /* opcional: todas mayúsculas */
-  
+   padding: 10px;  
 
    background-color: #d6d5d5;  /* color oscuro */
 }
@@ -269,26 +270,64 @@ aside {
 
 
 footer {
-  background-color: #111;
-  color: white;
-  padding: 20px;
-  text-align: center;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
 }
 
-footer .social-icons {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-footer .social-icons a img {
-  width: 32px;       /* tamaño de los iconos */
-  height: 32px;
-  object-fit: cover;
-  transition: transform 0.2s;
+.social-icons {
+    display: flex;
+    gap: 15px;
 }
 
-footer .social-icons a img:hover {
-  transform: scale(1.2); /* efecto hover al pasar el cursor */
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.attribution a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive: en móviles, íconos y links se apilan */
+@media (max-width: 500px) {
+    .social-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
 }
