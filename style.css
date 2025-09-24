@@ -12,77 +12,63 @@
   /* Header y banner */
   header {
     background-color: #111; /* color de fondo del banner */
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  
+    color: white;  /*La propiedad color en CSS se usa para definir el color del texto de un elemento.*/
+    padding-top: 8px;
+    padding-bottom: 5px;
+    display: flex;     /* La propiedad display con el valor flex en CSS se usa para convertir un contenedor en un “flex container”*/
+    flex-direction: column;  /*La propiedad flex-direction: column en CSS se usa dentro de un contenedor con display: flex para organizar los elementos hijos en una columna vertical*/
+    align-items: center; /* La propiedad align-items: center se usa dentro de un contenedor con display: flex para alinear todos los elementos hijos (flex items) a lo largo contenedor y centrarlos. */
+    justify-content: space-between;  /* La propiedad justify-content: space-between se usa dentro de un contenedor con display: flex para distribuir los elementos hijos (flex items) a lo largo del contendor, dejando espacios iguales entre ellos */
   }
 
   /* Logo */
   .logo {
     display: flex;
+    flex-direction:row;
     align-items: center;
+    font-size: 1.8rem;
+    margin-bottom: 5px; /* margin bottom con el nav inferior */
+   }
+
+  .logo a{ 
+   text-decoration: none; /* quita el subrayado del enlace h1 */
+   color: inherit;         /* mantiene el color de su elemento padre es decir el color establecido en header */
   }
 
+  /* imagen del Logo */
   .logo a img {
     width: 82px;       /* ancho igual al alto */
     height: 82px;      /* mantiene proporción cuadrada */
-    margin-right: 10px;
     border-radius: 20%; /* hace la imagen circular */
     object-fit: cover;  /* recorta la imagen si no es cuadrada */
   }
-
-  .logo  h1 {
-    font-size: 1.8rem;
-    
-    
-  }
-
-  /* Navegación */
+ 
+   
+  /* Barra de navegacion */
   nav ul {
     display: flex;
-    list-style: none;
+    flex-direction: row; /* valor por defecto */
+    list-style: none; /* La propiedad list-style: none; se usa para eliminar los estilos predeterminados de las listas */
   }
 
   nav ul li {
     margin-left: 20px;
-    
   }
 
   nav ul li a {
-    color: white;
+    color: inherit;         /* mantiene el color de su elemento padre es decir el color establecido en header */
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Permite que el cambio de color no sea instantáneo, sino que ocurra gradualmente durante un tiempo determinado */
     
   }
 
-  nav ul li a:hover {
-    color: #ffcc00; /* efecto hover */
+  nav ul li a:hover { /* El efecto hover se usa para cambiar el estilo de un elemento cuando el cursor del mouse pasa sobre él. */
+    color: #ffcc00; 
   }
 
-  /* Responsivo: menú colapsa en pantallas pequeñas */
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    nav ul {
-      flex-direction: column;
-      width: 100%;
-      margin-top: 10px;
-    }
-    nav ul li {
-      margin-left: 0;
-      margin-bottom: 10px;
-    }
-  }
-
-  
-
+ 
+/* aside */
 
 .aside-publicidad aside {
   width: 100%;
@@ -127,7 +113,7 @@
 
 
 
-.news-highlights {
+.section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -331,3 +317,21 @@ footer {
         gap: 5px;
     }
 }
+
+
+ /* Responsivo: menú colapsa en pantallas pequeñas */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+    }
+    nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
