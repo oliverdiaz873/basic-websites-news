@@ -52,7 +52,7 @@
   }
 
   nav ul li {
-    margin-left: 20px;
+    margin-left: 5px;
   }
 
   nav ul li a {
@@ -60,15 +60,63 @@
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s; /* Permite que el cambio de color no sea instantáneo, sino que ocurra gradualmente durante un tiempo determinado */
-    padding: 5px;
+    padding: 3px;
+
+    position: relative;      /* importante para ::after */
+    display: inline-flex;    /* para alinear texto + icono */
+    align-items: center;
+    gap: 5px;                /* espacio entre texto e icono */
   }
 
-  nav ul li a:hover { /* El efecto hover se usa para cambiar el estilo de un elemento cuando el cursor del mouse pasa sobre él. */
-    color: #ffcc00; 
-    border: 2px solid #2196f3; /* color llamativo */
-    border-radius: 20px;        /* bordes redondeados */
-   
-  }
+/*--------------------*/
+/* animacion de la Barra de navegación */
+
+/* efecto Hover */
+nav ul li a:hover {
+  color: #d1dbdb;
+}
+
+/* Icono dentro del <a> */
+.icon_animation img {
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+/* Mostrar icono al pasar el mouse sobre el <a> */
+.icon_animation:hover img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slider usando ::after */
+nav ul li a::after {
+  content: ''; /* contenedor vacio */
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;   /* alto del contenedor */
+  background-color: #d1dbdb;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* indica la pagina activa  */
+nav ul li a.active {
+  color: #d1dbdb;
+}
+nav ul li a.active::after {
+  width: 100%;
+}
+/*------------------------*/
+
 
 /* Contenedor principal: main a la izquierda, aside a la derecha por defecto*/
 .container {
