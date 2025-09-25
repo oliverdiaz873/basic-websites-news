@@ -14,7 +14,7 @@
     background-color: #111; /* color de fondo del banner */
     color: white;  /*La propiedad color en CSS se usa para definir el color del texto de un elemento.*/
     padding-top: 8px;
-    padding-bottom: 5px;
+    padding-bottom: 7px;
     display: flex;     /* La propiedad display con el valor flex en CSS se usa para convertir un contenedor en un “flex container”*/
     flex-direction: column;  /*La propiedad flex-direction: column en CSS se usa dentro de un contenedor con display: flex para organizar los elementos hijos en una columna vertical*/
     align-items: center; /* La propiedad align-items: center se usa dentro de un contenedor con display: flex para alinear todos los elementos hijos (flex items) a lo largo contenedor y centrarlos. */
@@ -60,11 +60,14 @@
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s; /* Permite que el cambio de color no sea instantáneo, sino que ocurra gradualmente durante un tiempo determinado */
-    
+    padding: 5px;
   }
 
   nav ul li a:hover { /* El efecto hover se usa para cambiar el estilo de un elemento cuando el cursor del mouse pasa sobre él. */
     color: #ffcc00; 
+    border: 2px solid #2196f3; /* color llamativo */
+    border-radius: 20px;        /* bordes redondeados */
+   
   }
 
 /* Contenedor principal: main a la izquierda, aside a la derecha por defecto*/
