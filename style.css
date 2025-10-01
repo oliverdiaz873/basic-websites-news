@@ -162,12 +162,53 @@ nav ul li a.active::after {
   width: 100%;  /* ocupa todo el ancho del contenedor es decir del div */
   height: auto;
   aspect-ratio: 3 / 4;
-  background-image: url('imagenes/publicidad/chocolate.jpg');
-  background-size: cover;  /* La propiedad background-size: cover; en CSS se usa para escalar la imagen de fondo de un elemento de manera que cubra todo el área del contenedor */
-  background-position: center;
-  border-radius: 10px;   /* La propiedad border-radius en CSS se usa para redondear las esquinas de un elemento */
-
+  overflow: hidden;   /* La función de overflow en CSS es controlar qué sucede con el contenido que se desborda del área de un contenedor cuando este tiene un tamaño definido (width y height), el valor hidden oculta el contenido que se sale del contenedor*/
+  position: relative; /* necesario para que los hijos absolute se posicionen dentro, en este casos los divs con la publicidad de fondo */
 }
+
+
+/* ____________________AD-SLIDER______________________________*/
+
+/* divs rotativos con las imagenes de publicidad de fondo */
+.imagen {
+  position: absolute; /*  el valor  absolute Se ubica respecto al primer ancestro o contenedor que tenga una posición relative, absolute, fixed o sticky. en este caso el contenedor es el aside */    
+  top: 0;  /* coloca al elemento en la esquina superior izquierda del contenedor.*/
+  left: 0;
+  width: 100%;  /* cada div ocupa todo el espacio del aside. */
+  height: 100%;
+  background-size: cover; /* La propiedad background-size: cover; en CSS se usa para escalar la imagen de fondo de un elemento de manera que cubra todo el área del contenedor */
+  border-radius: 10px;   /* La propiedad border-radius en CSS se usa para redondear las esquinas de un elemento */
+  background-position: center;
+   opacity: 0;  /* inicialmente la imagen es invisible. */
+  animation: animacion 9s infinite; /* se aplica la animacion del keyframes durante 9 segundos y se repite infinitamente */
+}
+
+/* asignar imágenes y delays */
+.aside-publicidad aside .ad1 {
+  background-image: url('imagenes/publicidad/publicidad-chocolate.jpg');
+  animation-delay: 0s;  /* La propiedad animation-delay en CSS controla el tiempo que espera una animación antes de comenzar después de que se aplica al elemento. aqui empieza al segundo 0 */
+}
+
+.aside-publicidad aside .ad2 {
+  background-image: url('imagenes/publicidad/publicidad-iphone.jpg');
+  animation-delay: 3s;   /* empieza al segundo 3 */
+}
+
+.aside-publicidad aside .ad3 {
+  background-image: url('imagenes/publicidad/publicidad-KFC.jpg');
+  animation-delay: 6s;   /* empieza al segundo 6 */
+}
+
+/* animación */
+@keyframes animacion {
+  0%   { opacity: 0; }  /* empieza invisible.*/
+  10%  { opacity: 1; }   /* aparece gradualmente (fade-in)*/
+  30%  { opacity: 1; }   /* permanece visible un rato.*/
+  40%  { opacity: 0; }   /* desaparece gradualmente (fade-out).*/
+  100% { opacity: 0; }   /* se mantiene invisible hasta el siguiente ciclo.*/
+}
+
+/* __________________________________________________________________ */
 
 /* titulo de la publicidad */
 .aside-publicidad h3 {

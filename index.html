@@ -39,7 +39,7 @@
 
                 <h1 class="logo">  
                     <a href="index.html" aria-label="Ir a la página principal de NewsHub">  <!-- logo clickeable-->  <!--aria-label proporciona una descripción textual de un elemento para los lectores de pantalla -->
-                        <img src="imagenes/logo.png" alt="Logo NewsHub">
+                        <img src="imagenes/logo/logo.png" alt="Logo NewsHub">
                          NewsHub - Últimas noticias al instante
                     </a> 
                 </h1>
@@ -122,9 +122,15 @@
 
 
             <!-- aside -->
-            <div class="aside-publicidad">
-                <h3>PUBLICIDAD</h3>
-                   <aside></aside>
+            <div class="aside-publicidad" aria-label="Publicidad" role="complementary">   <!-- el atributo role se usa para definir el papel o función semántica de un elemento para lectores de pantalla -->
+                <h3>PUBLICIDAD</h3>                                                       <!-- el valor complementary indica que este elemento es un complemento de contenido, es decir, no es contenido principal, sino información adicional.-->
+                   <aside>
+                    <!-- divs rotativos con las imagenes de publicidad de fondo -->
+                    <div class="imagen ad1" aria-hidden="true"></div>        <!-- aria-hidden="true" es un atributo de accesibilidad que le dice a los lectores de pantalla que ignoren el elemento -->
+                    <div class="imagen ad2" aria-hidden="true"></div>           
+                    <div class="imagen ad3" aria-hidden="true"></div>
+
+                   </aside>
             </div>
   
     </div>
