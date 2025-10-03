@@ -185,17 +185,17 @@ nav ul li a.active::after {
 
 /* asignar imágenes y delays */
 .aside-publicidad aside .ad1 {
-  background-image: url('imagenes/publicidad/publicidad-chocolate.jpg');
+  background-image: url('../imagenes/publicidad/publicidad-chocolate.jpg');
   animation-delay: 0s;  /* La propiedad animation-delay en CSS controla el tiempo que espera una animación antes de comenzar después de que se aplica al elemento. aqui empieza al segundo 0 */
 }
 
 .aside-publicidad aside .ad2 {
-  background-image: url('imagenes/publicidad/publicidad-iphone.jpg');
+  background-image: url('../imagenes/publicidad/publicidad-iphone.jpg');
   animation-delay: 3s;   /* empieza al segundo 3 */
 }
 
 .aside-publicidad aside .ad3 {
-  background-image: url('imagenes/publicidad/publicidad-KFC.jpg');
+  background-image: url('../imagenes/publicidad/publicidad-KFC.jpg');
   animation-delay: 6s;   /* empieza al segundo 6 */
 }
 

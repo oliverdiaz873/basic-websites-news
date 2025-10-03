@@ -6,24 +6,25 @@
     <!--META ETIQUETAS-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Últimas noticias internacionales en NewsHub: política, conflictos, economía y actualidad mundial al instante.">
+    <meta name="description" content="Últimas noticias de política en NewsHub. Mantente informado sobre elecciones, debates y actualidad política.">
     <meta name="author" content="Oliver Antonio Díaz"/>
     <meta name="robots" content="index, follow">  
     <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
     <meta name="theme-color" content="#2196f3">
 
-    <!-- etiquetas Open Graph -->
-    <meta property="og:title" content="NewsHub Internacional - Últimas noticias mundiales">
+    <!-- etiquetas Open Graph para sección Política -->
+    <meta property="og:title" content="NewsHub - Política al instante">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost/newsHub-internacional">  <!--ejemplo de url local-->
-    <meta property="og:image" content="imagenes/internacional-banner.png"> 
-    <meta property="og:description" content="Noticias internacionales al instante: política, economía y conflictos globales.">
+    <meta property="og:url" content="http://localhost/newsHub-politica"> <!-- URL real de la sección -->
+    <meta property="og:image" content="imagenes/politica-banner.png"> <!-- imagen representativa de política -->
+    <meta property="og:description" content="Últimas noticias de política en NewsHub: elecciones, debates, leyes y actualidad nacional e internacional.">
     <meta property="og:site_name" content="NewsHub">
-    <meta property="og:locale" content="es_ES"> 
+    <meta property="og:locale" content="es_ES">
+
 
     <!-- Título y CSS -->
-    <title>NewsHub - Noticias Internacionales</title>
-    <link rel="stylesheet" href="style.css"/>
+    <title>NewsHub - Política</title>
+    <link rel="stylesheet" href="../css/style.css"/>
 
     <!-- Favicons -->
     <link rel="icon" href="imagenes/iconos/favicon/icon-16x16.png" type="image/png" sizes="16x16">
@@ -39,21 +40,21 @@
 
                 <h1 class="logo">  
                     <a href="index.html" aria-label="Ir a la página principal de NewsHub">  <!-- logo clickeable-->  <!--aria-label proporciona una descripción textual de un elemento para los lectores de pantalla -->
-                        <img src="imagenes/logo/logo.png" alt="Logo NewsHub">
+                        <img src="../imagenes/logo/logo.png" alt="Logo NewsHub">
                          NewsHub - Últimas noticias al instante
                     </a> 
                 </h1>
                
               <nav> <!--barra de navegacion-->
                   <ul> <!--la clase active indica la pagina activa-->
-                    <li><a href="index.html" class="icon_animation" aria-label="Inicio"><img src="imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"> Inicio</a></li>
-                    <li><a href="politica.html" class="icon_animation" aria-label="Sección Política"><img src="imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"> Política</a></li>
-                    <li><a href="internacional.html" class="icon_animation active" aria-label="Sección Internacional"><img src="imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"> Internacional</a></li>
-                    <li><a href="economia.html" class="icon_animation" aria-label="Sección Economía"><img src="imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"  > Economía</a></li>
-                    <li><a href="salud.html" class="icon_animation" aria-label="Sección Salud"><img src="imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Salud</a></li>
-                    <li><a href="deporte.html" class="icon_animation" aria-label="Sección Deporte"><img src="imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Deporte</a></li>
-                    <li><a href="clima.html" class="icon_animation" aria-label="Sección Clima"><img src="imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Clima</a></li>
-                    <li><a href="justicia.html" class="icon_animation" aria-label="Sección Justicia"><img src="imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Justicia</a></li>
+                    <li><a href="../index.html" class="icon_animation" aria-label="Inicio"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"> Inicio</a></li>
+                    <li><a href="politica.html" class="icon_animation active" aria-label="Sección Política"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"> Política</a></li>
+                    <li><a href="internacional.html" class="icon_animation" aria-label="Sección Internacional"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"> Internacional</a></li>
+                    <li><a href="economia.html" class="icon_animation" aria-label="Sección Economía"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"  > Economía</a></li>
+                    <li><a href="salud.html" class="icon_animation" aria-label="Sección Salud"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Salud</a></li>
+                    <li><a href="deporte.html" class="icon_animation" aria-label="Sección Deporte"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Deporte</a></li>
+                    <li><a href="clima.html" class="icon_animation" aria-label="Sección Clima"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Clima</a></li>
+                    <li><a href="justicia.html" class="icon_animation" aria-label="Sección Justicia"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Justicia</a></li>
                  </ul>
               </nav>
               
@@ -65,29 +66,29 @@
           <div class="container">
           
                <main>
-                   <h2 class="section-title">Internacional</h2>
+                   <h2 class="section-title">Política</h2>
                       <section class="section">
 
                           <!-- Noticia 1 -->
                           <article class="news-card">
-                              <a href="deporte.html" aria-label="Leer noticia: Gran victoria del equipo local">
-                                 <img src="imagenes/news/internacional/israel_and_iran.jpg" alt="Gran victoria del equipo local">
-                                 <h3>Israel e Irán: Crecen las Tensiones en Medio de Conflictos Regionales</h3>
+                              <a href="politica.html" aria-label="Leer noticia: Gran victoria del equipo local">
+                                 <img src="../imagenes/news/politica/congreso.avif" alt="Gran victoria del equipo local">
+                                 <h3>Aprobación Histórica: El Congreso Da Luz Verde a la Ley de Protección Ambiental</h3>
                               </a>
                            </article>
 
                           <!-- Noticia 2 -->
                           <article class="news-card">
-                             <a href="internacional.html" aria-label="Leer noticia: La guerra de Ucrania llega a su fin">
-                               <img src="imagenes/news/internacional/guerra.jpg" alt="La guerra de Ucrania llega a su fin">
-                              <h3>La guerra de Ucrania llega a su fin</h3>
+                             <a href="politica.html" aria-label="Leer noticia: La guerra de Ucrania llega a su fin">
+                               <img src="../imagenes/news/politica/presidente.avif" alt="La guerra de Ucrania llega a su fin">
+                              <h3>Encuestas Revelan Incremento en la Popularidad del Presidente</h3>
                              </a>
                            </article>
 
                         <!-- Noticia 3 -->
                         <article class="news-card">
                            <a href="politica.html"  aria-label="Leer noticia: Protestas por corrupción en el país">
-                               <img src="imagenes/news/politica/protestas.jpg" alt="Protestas por corrupción en el país">
+                               <img src="../imagenes/news/politica/protestas.jpg" alt="Protestas por corrupción en el país">
                                <h3>Protestas por corrupción</h3>
                            </a>
                         </article>
@@ -95,16 +96,16 @@
                           <!-- Noticia 4 -->
                           <article class="news-card">
                              <a href="salud.html" aria-label="Leer noticia: Descubren un nuevo virus que alerta a científicos">
-                              <img src="imagenes/news/salud/virus.jpg" alt="Descubren un nuevo virus que alerta a científicos">
-                              <h3>Descubren un nuevo virus que alerta a científicos</h3>
+                              <img src="../imagenes/news/politica/casa_blanca.jpg" alt="Descubren un nuevo virus que alerta a científicos">
+                              <h3>Casa Blanca Confirma Cumbre Internacional para Esta Semana</h3>
                              </a>
                            </article>
  
                          <!-- Noticia 5 -->
                           <article class="news-card">
                            <a href="economia.html" aria-label="Leer noticia: Incremento de la inflación impacta a los mercados">
-                             <img src="imagenes/news/economia/inflacion.jpg" alt="Incremento de la inflación impacta a los mercados">
-                             <h3>Incremento de la inflación impacta a los mercados</h3>
+                             <img src="../imagenes/news/politica/senado.avif" alt="Incremento de la inflación impacta a los mercados">
+                             <h3>El Senado Debate Nueva Propuesta de Reforma Constitucional</h3>
                            </a>
                           </article>
 
@@ -112,8 +113,8 @@
                           <!-- Noticia 6 -->
                           <article class="news-card">
                              <a href="justicia.html" aria-label="Leer noticia: Investigan homicidio en el centro de la ciudad">
-                               <img src="imagenes/news/justicia/homicidio.jpg" alt="Investigan homicidio en el centro de la ciudad">
-                               <h3>Investigan homicidio en el centro de la ciudad</h3>
+                               <img src="../imagenes/news/politica/debate.jpg" alt="Investigan homicidio en el centro de la ciudad">
+                               <h3>Debate Presidencial: Candidatos Confrontan sus Propuestas Frente al País</h3>
                              </a>
                            </article>
  
@@ -145,15 +146,15 @@
               <!-- Íconos de redes sociales -->
               <div class="social-icons">
                    <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
-                    <img src="imagenes/iconos/redes/facebook.png" alt="ir a facebook">
+                    <img src="../imagenes/iconos/redes/facebook.png" alt="ir a facebook">
                    </a>
 
                    <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
-                    <img src="imagenes/iconos/redes/x.png" alt="ir a x">
+                    <img src="../imagenes/iconos/redes/x.png" alt="ir a x">
                    </a>
 
                    <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
-                    <img src="imagenes/iconos/redes/instagram.png" alt="ir a instagram">
+                    <img src="../imagenes/iconos/redes/instagram.png" alt="ir a instagram">
                    </a>
               </div>
 
