@@ -11,6 +11,14 @@
 
   /* Header y banner */
   header {
+    /* propiedades para hacer el header fijo */
+    position: fixed;        /* Mantiene el header fijo en una posicion especifica al hacer scroll */
+    top: 0;                 /* Lo coloca arriba de la ventana */
+    left: 0;
+    width: 100%;            /* Ocupa todo el ancho */
+    z-index: 1000;          /* Lo mantiene por encima del contenido */
+    /*---------------------------------------------------------------*/
+    
     background-color: #111; /* color de fondo del banner */
     color: white;  /*La propiedad color en CSS se usa para definir el color del texto de un elemento.*/
     padding-top: 8px;
@@ -123,6 +131,7 @@ nav ul li a.active::after {
   display: flex;
   gap: 10px; /* espacio entre main y aside */
   padding: 20px;
+  margin-top: 130px; /* separacion ideal del div contenedor y el header fijo*/
 }
 
 /* Main: ocupa más espacio */
