@@ -382,7 +382,7 @@ footer {
 #fecha-noticia {
     font-size: 0.9rem;       /* Tamaño un poco más pequeño que el texto normal */
     color: #333232;        /* Gris suave, discreto */
-    margin-bottom: 1em;      /* Espacio debajo de la fecha */
+    margin-bottom: 0.5em;      /* Espacio debajo de la fecha */
     display: block;
 }
 
@@ -394,10 +394,13 @@ footer {
   width: 70%;
   max-width: 370px;
   margin-right: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border-radius: 10px;
   object-fit: cover;
+  
+  
 }
+
 
 /* Texto de la noticia */
 .noticia-individual p {
@@ -417,4 +420,47 @@ footer {
     margin-right: 0;
     margin-bottom: 15px;
   }
+}
+
+
+
+
+
+
+
+
+
+/* figure caption */
+
+.noticia-individual figure {
+    float: left;        /* imagen a la izquierda */
+    width: 70%;
+    max-width: 370px;
+    margin: 0 20px 15px 0; /* espacio entre imagen y texto */
+}
+
+
+.noticia-individual figure img {
+    width: 100%;        /* ocupa todo el ancho del figure */
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.noticia-individual figure figcaption {
+    display: block;
+    clear: both;        /* aparece debajo de la imagen */
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Texto que rodea la imagen */
+.noticia-individual p {
+    line-height: 1.6;
+    color: #000;
+    text-align: justify;
+    margin-bottom: 15px;
 }
