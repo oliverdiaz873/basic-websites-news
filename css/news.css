@@ -464,3 +464,191 @@ footer {
     text-align: justify;
     margin-bottom: 15px;
 }
+
+
+
+
+/* ------------------ MEDIA QUERIES RESPONSIVAS ------------------ */
+
+/* Para dispositivos móviles: ancho máximo 768px */
+@media (max-width: 768px) {
+
+  /* Header: reducir tamaño del logo y centrar nav */
+  header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente los elementos */
+  padding-left: 10px;  /* espacio a la izquierda */
+  padding-right: 10px; /* espacio a la derecha */
+  }
+
+  .logo {
+    flex-direction: column;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .logo a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 15%;
+    margin-bottom: 5px;
+  }
+
+  nav {
+     width: 100%;
+    overflow-x: auto; /* permite scroll horizontal */
+    -webkit-overflow-scrolling: touch; /* suaviza el scroll en iOS */
+    max-height: 50px; /* limita la altura del nav */
+    
+  }
+
+ nav ul {
+    flex-direction: row; /* horizontal */
+    gap: 10px;
+    white-space: nowrap; /* evita que los botones se rompan a la siguiente línea */
+    padding: 0 10px; /* opcional, para margen interno */
+    align-items: center;    /* centra verticalmente los botones e íconos */
+  }
+
+  nav ul li {
+    margin-left: 0;
+    flex: 0 0 auto; /* evita que los items se reduzcan */
+  }
+
+  nav ul li a {
+    font-size: 0.95rem;
+    padding: 5px 8px;
+    display: flex;          /* asegura que el texto e icono estén en línea */
+    align-items: center;
+    gap: 5px;
+  }
+
+  
+ nav ul li a::after {
+    bottom: 0;    /* lo acercamos a la base del texto */
+    height: 2px;  /* reducimos grosor del slider */
+  }
+
+  
+/* ocultar scroll Para Webkit (Chrome, Safari, Edge) */
+nav::-webkit-scrollbar {
+  display: none;
+}
+  .icon_animation img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Contenedor principal: apilar main y aside verticalmente */
+  .container {
+    flex-direction: column;
+    margin-top: 115px; /* separacion del header fijo */
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .container main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Section noticias: una columna */
+  .container main .section {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Noticias: ajustar altura de imagen */
+  .news-card img {
+    height: 180px;
+  }
+
+  /* Aside publicidad: ajustar tamaño */
+  .container .aside-publicidad {
+    flex: unset;
+    width: 100%;
+  }
+
+  .aside-publicidad h3 {
+    font-size: 1rem;
+    padding: 5px 0;
+  }
+
+  .aside-publicidad aside {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Footer: centrar y ajustar iconos */
+  footer {
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .social-icons img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .footer-links a {
+    margin: 0 3px;
+    font-size: 13px;
+  }
+
+  .attribution a {
+    font-size: 11px;
+  }
+}
+
+/* Para dispositivos muy pequeños (móviles extra pequeños): ancho máximo 480px */
+@media (max-width: 480px) {
+
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .logo a img {
+    width: 50px;
+    height: 50px;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .news-card img {
+    height: 150px;
+  }
+
+  .aside-publicidad h3 {
+    font-size: 0.9rem;
+  }
+
+  .aside-publicidad aside {
+    aspect-ratio: 1 / 1; /* cuadrado en móviles muy pequeños */
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .social-icons img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  .attribution a {
+    font-size: 10px;
+  }
+}
