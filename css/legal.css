@@ -34,18 +34,18 @@ header {
 /* LOGO */
 .logo {
     display: flex;
+    flex-direction:row;
     align-items: center;
     gap: 10px;
     font-size: 1.8rem;
     margin-bottom: 5px;
+
 }
 
 .logo a {
     text-decoration: none;
     color: inherit;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+   
 }
 
 .logo a img {
@@ -59,10 +59,13 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
 }
+
+ nav ul li {
+    margin-left: 5px;
+  }
 
 nav ul li a {
     color: inherit;
