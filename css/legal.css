@@ -178,6 +178,7 @@ nav ul li a.active {
     font-size: 1rem;
     margin-bottom: 18px;
     color: #333;
+    text-align: justify;  /* Importante para que los párrafos se vean bien en dispositivos móviles. */
 }
 
 .privacy-content h3 {
