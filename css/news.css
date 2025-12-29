@@ -11,24 +11,38 @@
 
   /* Header y banner */
   header {
-    /* propiedades para hacer el header fijo */
-    position: fixed;        /* Mantiene el header fijo en una posicion especifica al hacer scroll */
-    top: 0;                 /* Lo coloca arriba de la ventana */
-    left: 0;
-    width: 100%;            /* Ocupa todo el ancho */
-    z-index: 1000;          /* Lo mantiene por encima del contenido */
-    /*---------------------------------------------------------------*/
-
     background-color: #111; /* color de fondo del banner */
     color: white;  /*La propiedad color en CSS se usa para definir el color del texto de un elemento.*/
-    padding-top: 8px;
-    padding-bottom: 7px;
+    padding: 5px 30px;
+    border-radius: 20px;
+    width: fit-content;  /* La propiedad width: fit-content; ajusta automáticamente el ancho del elemento al tamaño mínimo necesario para que quepa su contenido */
+    margin: 20px auto;
+
+    /* propiedades para hacer el header fijo */
+    position: fixed;        /* Mantiene el header fijo en una posicion especifica al hacer scroll */
+    top: 3px;                 /* Lo coloca arriba de la ventana */
+    left: 50%;
+    transform: translateX(-50%); /* centra el header horizontalmente de forma perfecta */
+    z-index: 1000;    /* el header Siempre estará visible por encima de otros elementos de la página en el eje z */
+    /*---------------------------------------------------------------*/
+    
     display: flex;     /* La propiedad display con el valor flex en CSS se usa para convertir un contenedor en un “flex container”*/
-    flex-direction: column;  /*La propiedad flex-direction: column en CSS se usa dentro de un contenedor con display: flex para organizar los elementos hijos en una columna vertical*/
+    flex-direction: row;  /*La propiedad flex-direction: column en CSS se usa dentro de un contenedor con display: flex para organizar los elementos hijos en una columna vertical*/
     align-items: center; /* La propiedad align-items: center se usa dentro de un contenedor con display: flex para alinear todos los elementos hijos (flex items) a lo largo contenedor y centrarlos. */
-    justify-content: space-between;  /* La propiedad justify-content: space-between se usa dentro de un contenedor con display: flex para distribuir los elementos hijos (flex items) a lo largo del contendor, dejando espacios iguales entre ellos */
+    justify-content: center;  
+    gap: 15px;
+    white-space: nowrap;  /* white-space: nowrap; impide que el texto o los elementos hijos pasen a una nueva línea es decir, todo el contenido se mantiene en una sola línea */
   }
 
+  h1{
+     margin: 0;
+     font-size: 22px;
+     letter-spacing: 1px;
+     font-family: 'Domine-Bold', serif;
+     margin: 0;
+  }
+
+    
   /* Logo */
   .logo {
     display: flex;
@@ -39,19 +53,24 @@
    }
 
   .logo a{ 
-   text-decoration: none; /* quita el subrayado del enlace h1 */
-   color: inherit;         /* mantiene el color de su elemento padre es decir el color establecido en header */
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white; /* para que el h1 mantenga el color */
+    text-decoration: none; /* quita el subrayado del enlace h1 */
+    color: inherit;         /* mantiene el color de su elemento padre es decir el color establecido en header */
   }
 
   /* imagen del Logo */
   .logo a img {
-    width: 82px;       /* ancho igual al alto */
-    height: 82px;      /* mantiene proporción cuadrada */
+    width: 40px;
+    height: 40px;
     border-radius: 20%; /* hace la imagen circular */
-    object-fit: cover;  /* recorta la imagen si no es cuadrada */
+   
   }
  
-   
+ 
   /* Barra de navegacion */
   nav ul {
     display: flex;
