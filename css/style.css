@@ -38,7 +38,7 @@
      margin: 0;
      font-size: 22px;
      letter-spacing: 1px;
-     font-family: 'Domine-Bold', serif;
+     font-family: 'Domine', serif;
      margin: 0;
   }
 
@@ -144,13 +144,12 @@ nav ul li a.active::after {
 }
 /*------------------------*/
 
-
 /* Contenedor principal: main a la izquierda, aside a la derecha por defecto*/
 .container {
   display: flex;
   gap: 10px; /* espacio entre main y aside */
   padding: 20px;
-  margin-top: 130px; /* separacion ideal del div contenedor y el header fijo*/
+  margin-top: 80px; /* separacion ideal del div contenedor y el header fijo*/
 }
 
 /* Main: ocupa más espacio */
@@ -161,30 +160,27 @@ nav ul li a.active::after {
   padding-right: 20px;
 }
 
-/* titulo del main */
+/* titulo del main (h2) */
 .section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;      
+  font-family: 'Domine', serif;
+  font-size: 2.3rem;      
   margin-bottom: 15px;
-  text-align: center;      
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-bottom: 5px;
+  text-align: left;      
+  font-weight: 700;
   padding-top: 5px;
-  background-color: #d6d5d5; 
-  border-radius: 5px;           /* esquinas redondeadas */
+  border-bottom: #111 2px solid;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
 }
-
-
 
 /* div del aside */
 .container .aside-publicidad {
+  margin-top: 20px; /* ajusta el valor a tu gusto */
   flex: 1;      /* ocupa 1 parte del contenedor */
   display: flex;
   flex-direction: column; /* para que h3 y aside se organicen verticalmente */
   gap: 10px;  /* la propiedad gap se usa para definir el espacio entre los elementos hijos de un contenedor */
 }
-
 
 /* aside */
 .aside-publicidad aside {
@@ -241,15 +237,14 @@ nav ul li a.active::after {
 
 /* titulo de la publicidad */
 .aside-publicidad h3 {
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    text-align: center;
-    font-size: 1.2rem;
-    color: #111;
-    background-color: #d6d5d5;  
-    border-radius: 5px;           /* esquinas redondeadas */
-    font-weight: bold;
+  font-size: 1.1rem;      
+  margin-bottom: 5px;
+  text-align: left;      
+  font-weight: 700;
+  padding-top: 5px;
+  border-bottom: #111 2px solid;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
 }
 
 
@@ -265,7 +260,7 @@ nav ul li a.active::after {
 /* article */
 .news-card {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -286,15 +281,54 @@ nav ul li a.active::after {
 /* titulos de las noticias */
 .news-card h3 {
   padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 1.1rem;
-  text-align: center;
+  padding-bottom: 1px;
+  font-size: 1.6rem;
+  text-align: left;
+  font-family: 'Domine', serif;
 }
 
 .news-card:hover {
   transform: translateY(-5px); /*La propiedad transform: translateY; se usa para mover un elemento verticalmente*/
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
+/* Noticia destacada: tamaño mayor que las demás */
+.news-card.featured {
+  grid-column: span 2;   /* ocupa dos columnas */
+  grid-row: span 2;      /* ocupa dos filas */
+}
+.news-card.featured img {
+  height: 100%;
+}
+.news-card.featured h3 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  font-family: 'Domine', serif;
+  text-align: left;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.featured-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-family: 'Domine', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0)
+  );
+}
+
 
 
 /* footer */
