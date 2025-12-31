@@ -34,6 +34,9 @@
     white-space: nowrap;  /* white-space: nowrap; impide que el texto o los elementos hijos pasen a una nueva línea es decir, todo el contenido se mantiene en una sola línea */
   }
 
+/* Hero oculto por defecto (activado por css/beautiful.css) */
+/* (removed) */
+
   h1{
      margin: 0;
      font-size: 22px;
@@ -70,18 +73,16 @@
    
   }
  
-   
   /* Barra de navegacion */
   nav ul {
     display: flex;
     flex-direction: row; /* valor por defecto */
     list-style: none; /* La propiedad list-style: none; se usa para eliminar los estilos predeterminados de las listas */
   }
-
   nav ul li {
     margin-left: 5px;
   }
-
+  
   nav ul li a {
     color: inherit;         /* mantiene el color de su elemento padre es decir el color establecido en header */
     text-decoration: none;
@@ -149,7 +150,7 @@ nav ul li a.active::after {
   display: flex;
   gap: 10px; /* espacio entre main y aside */
   padding: 20px;
-  margin-top: 80px; /* separacion ideal del div contenedor y el header fijo*/
+  margin-top: 77px; /* separacion ideal del div contenedor y el header fijo*/
 }
 
 /* Main: ocupa más espacio */
@@ -187,7 +188,7 @@ nav ul li a.active::after {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 22px;
+  margin-top: 18px;
 
 }
 
@@ -259,7 +260,7 @@ nav ul li a.active::after {
 
 /* titulo de la publicidad */
 .aside-publicidad h3 {
-  font-size: 1.1rem;      
+  font-size: 1.3rem;      
   margin-bottom: 4px;
   text-align: left;      
   font-weight: 700;
@@ -267,6 +268,7 @@ nav ul li a.active::after {
   border-bottom: #111 1px solid;
   letter-spacing: 0.3px;
   line-height: 1.2;
+  font-family: 'Domine', serif;
 }
 
 /* Sección Opinión - debajo de la publicidad */
@@ -277,7 +279,7 @@ nav ul li a.active::after {
 }
 
 .opinion h3 {
-  font-size: 1.1rem;      
+  font-size: 1.3rem;      
   margin-bottom: 4px;
   text-align: left;      
   font-weight: 700;
@@ -285,6 +287,7 @@ nav ul li a.active::after {
   border-bottom: #111 1px solid;
   letter-spacing: 0.3px;
   line-height: 1.2;
+  font-family: 'Domine', serif;
 }
 
 .opinion-card {
@@ -370,8 +373,16 @@ nav ul li a.active::after {
 .news-card p {
   padding: 0px 12px;
   font-size: 0.95rem;
-  color: #555;
+  color: #333;
   line-height: 1.4;
+}
+/* Fecha de la noticia */
+.fecha-noticia,
+.fecha-noticia small {
+  font-size: 0.73rem; /* tamaño discreto */
+  color: #494949;
+  line-height: 1.4;
+  margin: 2px 0px;
 }
 
 /* Resumen de noticia destacada */
